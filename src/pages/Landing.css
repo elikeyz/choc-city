@@ -1,0 +1,9 @@
+.landing-page-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main {
+    height: 100vh;
+}
