@@ -36,13 +36,11 @@ class Artist extends Component {
 
                     axios.get('https://jsonplaceholder.typicode.com/comments')
                         .then((tweetResponse) => {
-                            console.log(tweetResponse.data);
                             if (tweetResponse === 200) {
                                 const tweets = tweetResponse.data.filter(tweet => tweet.email === this.state.artist.email);
                                 this.setState({
                                     tweets: [...tweets]
                                 });
-                                console.log(this.state.tweets);
                             }
                         })
                 }
@@ -69,7 +67,7 @@ class Artist extends Component {
                             const childLink = `/albums/${album.id}`;
                             return (
                                 <Link key={album.id} to={childLink}>
-                                    <Card className="my-3" bg="primary" text="white">
+                                    <Card className="my-3" bg="secondary" text="white">
                                         <Card.Body>
                                             <Card.Text><strong>{ album.title }</strong></Card.Text>
                                         </Card.Body>

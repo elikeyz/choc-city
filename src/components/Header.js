@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 function Header() {
     return (
         <header>
-            <Navbar bg="dark" variant="dark" expand="sm" fixed="top">
+            <Navbar bg="primary" variant="dark" expand="sm" fixed="top">
                 <Link to="/">
                     <Navbar.Brand>Choc-City</Navbar.Brand>
                 </Link>
