@@ -30,14 +30,14 @@ class Album extends Component {
                 <Container>
                     <h1>Album</h1>
                     <Row>
-                        <Col md={4} sm={6} xs={12}>
-                            { this.state.photos.map(photo => (
-                                <Card key={photo.id} className="my-3">
+                        { this.state.photos.map(photo => (
+                            <Col key={photo.id} md={4} sm={6} xs={12}>
+                                <Card className="my-3">
                                     <Card.Img variant="top" src={photo.url} />
                                     <Card.Title>{photo.title}</Card.Title>
                                 </Card>
-                            )) }
-                        </Col>
+                            </Col>
+                        )) }
                     </Row>
                 </Container>
             </main>
